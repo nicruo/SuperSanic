@@ -23,7 +23,7 @@ public class PlayerControl : MonoBehaviour {
 	void Update () {
         var horizontal = Input.GetAxis("Horizontal");
 
-        anim.SetBool("walking", true);
+        anim.SetBool("walking", horizontal != 0);
 
         body.AddForce(Vector2.right * horizontal * speed);
 
